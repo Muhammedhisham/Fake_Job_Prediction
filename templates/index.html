@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Fake Job Prediction</title>
+    <link rel="stylesheet" href="/static/CSS/index.CSS" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form action="predict" method="post">
+      <div id="B">
+        <div class="container text-center" id="A1">
+          <div class="row text-center">
+            <h3 class="text-center">
+              Fake
+              <small class="text-muted text-center">Job</small> Prediction
+            </h3>
+          </div>
+        </div>
+        <div id="A3">
+          <div class="container A2">
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Title</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="title"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Location</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="location"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Department</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="department"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container A2">
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Company profile</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="company_profile"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Description</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="description"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Requirements</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="requirements"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container A2">
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Employment Type </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="employment_type"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1"
+                    >Required Experience</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="required_experience"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1"
+                    >Required Education</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="required_education"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container A2">
+            <div class="row">
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Benefits</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="benefits"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Industry</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="industry"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Function</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleFormControlInput1"
+                    name="function"
+                    placeholder="Type here"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container A2">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="form-group">
+                  <button id="button" type="submit">SUBMIT</button>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="form-group">
+                  <label for="">THE PREDICTION</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="PREDICTION"
+                    readonly
+                    value="{{prediction}}"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
